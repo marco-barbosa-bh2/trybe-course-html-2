@@ -6,14 +6,50 @@
     
     <title>Soco a 80km/h: Conheça o Stomatopoda.</title>
     <style>
+  
+       .outline-title{
+          display:none;
+       }
+
        table,th,td{
           border: 1px solid black;
        }
+       
+       .sidebar {
+          background: rgb(255, 255, 219);
+          float:right;
+          foat:top;
+          margin-left:6px;
+          margin-bottom:6px;
+          width:30%;
+       }
+
+       .artigo {
+          float:left;
+          margin-bottom:6px;
+          margin-right:6px;
+          width:60%;
+       }
+
+       .pic {
+          float:left;
+          margin-right:6px;
+          margin-bottom:6px;
+       }
+
+       .fundo {
+          clear:both;    
+       }
+
     </style>
+    
     <section>
+    <h1 class="outline-title">Cabeçalho</h1>
+
     </section>
     
     <nav>
+       <h1 class="outline-title">Menu de Navegação</h1>
        <a href="">Página Inicial</a>
        <a href="">Sobre</a>
        <a href="">Contato</a>
@@ -21,8 +57,10 @@
 
   </head>
   <body>
+    <h1 class="outline-title">Corpo da Página</h1>
     <!--insira os elementos aqui-->
-  <section>
+  <section class="artigo">
+     <h1 class="outline-title">Artigos</h1>
      <article>
         <h2>Stomatopoda, quem ele é?</h2>
            <h3>Nome Científico</h3>
@@ -53,53 +91,57 @@
                     </table>
               </p>
      </article>
-  </section>  
-      
+    
      <article>
-           <h3>O que o Stomatopoda vê?</h3>
-              <h4>Visão Colorida</h4>
-              <img src="./images/stomatopoda-olhos.jpg" alt="Close olhos Stomatopoda" width="200px">
-                 <p>O stomatopoda tem em seus olhos dezesseis tipos diferentes de células cônicas sensiveis à luz.
-                    Para você ter uma ideia do que isso significa, nós humanos só temos três tipos (as
-                    células sensíveis ao vermelho, verde e azul ). Os cachorros só tem dois tipos de células 
-                    cônicas, às sensíveis ao azul e ao verde. A borboleta, cinco tipos diferentes de células 
-                    cônicas sensíveis à luz. Incrível não?
-                 </p>
-        </article>
+        <h3>O que o Stomatopoda vê?</h3>
+           <h4>Visão Colorida</h4>
+           <img class="pic" src="./images/stomatopoda-olhos.jpg" alt="Close olhos Stomatopoda" width="200px">
+              <p>O stomatopoda tem em seus olhos dezesseis tipos diferentes de células cônicas sensiveis à luz.
+                 Para você ter uma ideia do que isso significa, nós humanos só temos três tipos (as
+                 células sensíveis ao vermelho, verde e azul ). Os cachorros só tem dois tipos de células 
+                 cônicas, às sensíveis ao azul e ao verde. A borboleta, cinco tipos diferentes de células 
+                 cônicas sensíveis à luz. Incrível não?
+              </p>
+     </article>
 
-        <article>
-           <h3>Um soco de fazer inveja no Mike Tyson!</h3>
-              <h4>Rápido e Violento</h4>
-                 <img src="./images/stomatopoda-apendices.jpg" alt="Stomatopoda e seus apêndices" width="200px">
-                 <p>O Stomatopoda tem dois apêndices retráteis na frente do seu corpo ( como 
-                    se fossem braços com punhos cerrados ) que podem se esticar em uma velocidade
-                    semelhante a um projétil de uma carabina calibre 22. Ele pode dar um soco em 
-                    menos de 330 microssegundos com uma força de 1500 N.
-                 </p>
-        </article>
+     <article>
+        <h3>Um soco de fazer inveja no Mike Tyson!</h3>
+           <h4>Rápido e Violento</h4>
+              <img class="pic" src="./images/stomatopoda-apendices.jpg" alt="Stomatopoda e seus apêndices" width="200px">
+              <p>O Stomatopoda tem dois apêndices retráteis na frente do seu corpo ( como 
+                 se fossem braços com punhos cerrados ) que podem se esticar em uma velocidade
+                 semelhante a um projétil de uma carabina calibre 22. Ele pode dar um soco em 
+                 menos de 330 microssegundos com uma força de 1500 N.
+              </p>
+     </article>
 
-        <article>
-           <h3>Nem precisa encostar? Como assim?</h3>
-              <h4>Dando um Hadouken nas presas</h4>
-              <img src="./images/stomatopoda-bolhas.jpg" alt="Stomatopoda dando um Hadouken" width="200px">
-                 <p>O "soco" do Stomatopoda é tão rápido que gera bolhas embaixo da água por 
-                    um processo conhecido como supercavitação. Essas bolhas ao entrarem em colapso 
-                    produzem uma onda de choque capaz de matar as presas do Stomatopoda, mesmo que 
-                    ele erre o alvo.
-                 </p>
-        </article>
+     <article>
+        <h3>Nem precisa encostar? Como assim?</h3>
+           <h4>Dando um Hadouken nas presas</h4>
+           <img class="pic" src="./images/stomatopoda-bolhas.jpg" alt="Stomatopoda dando um Hadouken" width="200px">
+              <p>O "soco" do Stomatopoda é tão rápido que gera bolhas embaixo da água por 
+                 um processo conhecido como supercavitação. Essas bolhas ao entrarem em colapso 
+                 produzem uma onda de choque capaz de matar as presas do Stomatopoda, mesmo que 
+                 ele erre o alvo.
+              </p>
+     </article>
+  </section>      
   
-  <aside>
-
-
-  </aside>
-     <h3>Vídeo Relacionado</h3>
-        <p>
-           Veja o vídeo desse adorável bichinho em ação clicando <a href="https://www.youtube.com/watch?v=E0Li1k5hGBE" target="_blink">
-           >>AQUI<<</a>
-        </p>
   <section>
-     <article>
+     <h1 class="outline-title">Mídia</h1>
+     <aside class="sidebar">
+        <h2>Vídeo Relacionado</h2>
+           <p>
+              Veja o vídeo desse adorável bichinho em ação clicando <a href="https://www.youtube.com/watch?v=E0Li1k5hGBE" target="_blink">
+              >>AQUI<<</a>
+           </p>
+     </aside>
+  </section> 
+  
+
+  <section>
+     <h1 class="outline-title">Bibliografia</h1>
+     <article class="fundo">
         <h2>Referências Bibliográficas</h2>
            <p>
               <span style="font-weight:bold;">Why the mantis shrimp is my new favorite animal - The Oatmeal</span>
