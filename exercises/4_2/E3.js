@@ -1,4 +1,4 @@
-//Programa para gerar o triangulo retangulo de base n
+//Programa para gerar o triangulo retangulo de base n direito
 const n=5;
 let tela=[];
 
