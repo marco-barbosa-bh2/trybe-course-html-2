@@ -1,16 +1,17 @@
 //Programa para gerar uma piramide de base n
 const n=5;
 
-let tela="";
+let tela=[];
 
 for(let i=0;i<n;i+=1){
-    tela+=i;
+    tela[i]=" ";
 }
 
 for(let i=0;i<=parseInt(n/2);i+=1){
       
-    tela=tela.replace(tela[parseInt(n/2)-i],"*");     
-    tela=tela.replace(tela[parseInt(n/2)+i],"*");
+    tela[parseInt(n/2)-i]="*";     
+    tela[parseInt(n/2)+i]="*";
+    
 
     console.log(tela);
 
