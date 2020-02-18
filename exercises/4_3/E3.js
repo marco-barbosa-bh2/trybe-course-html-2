@@ -1,4 +1,4 @@
-//Imprime objeto
+//Imprime chaves objeto com for in
 let info = {
     personagem: "Margarida",
     origem: "Pato Donald",
@@ -6,4 +6,6 @@ let info = {
     recorrente: "Sim",
   };
 
-    console.log(info);
+for(indice in info){
+    console.log(indice);
+}
