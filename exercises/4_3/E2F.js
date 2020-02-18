@@ -5,6 +5,8 @@ function verificaMaior(lista){
     let ultimo=0;
     let i=0;
 
+    ultimo=maior[0];
+
     for(indice in maior){
         if(maior[indice]>ultimo){
             ultimo=maior[indice];
