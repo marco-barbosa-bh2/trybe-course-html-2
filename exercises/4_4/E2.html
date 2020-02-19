@@ -51,10 +51,18 @@
  Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
  Crie uma função que exiba o conteúdo de todas as tags <p> no console.
         */
+        function mudaTexto(tagx,indicex,textox){
+         document.getElementsByTagName(tagx)[indicex].innerHTML=textox
+
+        }
+        mudaTexto("p",1,"Daqui a dois anos serei um desenvolvedor pleno e estarei ganhando um bom salário e trabalhando remotamente.");
+         
         function mudaCor(classex,indicex,cor){
             document.getElementsByClassName(classex)[indicex].style.backgroundColor=cor
         }
+        mudaCor("main-content",0,"rgb(15, 163, 107)");
     </script>
+
 
   </body>
 </html>
