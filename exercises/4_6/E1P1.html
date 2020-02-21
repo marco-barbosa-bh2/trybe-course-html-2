@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang=pt-br>
+<html lang=eng>
  <head>
   <meta charset="utf-8" />
   <title></title>
@@ -18,19 +18,21 @@
   
  <div id="story"></div>
  <script>
-     function makeMadLib(){
+     window.onload=function(){
+        function makeMadLib(){
         let historia=document.querySelector("#story");
         let noun=document.querySelector("#noun").value;
         let adjective=document.querySelector("#adjective").value;
         let person=document.querySelector("#person").value;
         
         historia.innerHTML="<p>"+noun +" " +adjective +" " +person;
-     }
+        }
 
-     let button=document.querySelector("#lib-button");
+        let button=document.querySelector("#lib-button");
 
-     button.addEventListener("click",makeMadLib);
-
+        button.addEventListener("click",makeMadLib);
+   
+     };
  </script>
  </body>
 </html>
