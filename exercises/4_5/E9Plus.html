@@ -93,6 +93,24 @@
       let tagH33=document.createElement("h3");
       document.getElementsByClassName("main-content")[0].appendChild(tagH33);
       
+      //Parte de baixo do exercicio
+      document.getElementsByTagName("h1")[0].className="title"; 
+      
+      document.getElementsByTagName("h3")[0].className="description"; 
+      document.getElementsByTagName("h3")[1].className="description";
+      document.getElementsByTagName("h3")[2].className="description";
+      
+      let rmChild=document.getElementsByClassName("main-content")[0].firstChild.nextSibling;
+      document.getElementsByClassName("main-content")[0].removeChild(rmChild);
+
+      let divR=document.getElementsByClassName("main-content")[0].firstChild.nextSibling;
+      divR.style.marginRight="auto";
+      
+      let centerC=document.getElementsByClassName("main-content")[0].firstChild;
+      centerC.style.backgroundColor="green";
+      
+      document.getElementsByClassName("right-content")[0].appendChild(lista_).innerHTML="<li> Um <li> Dois <li> Tres <li> Quatro <li> Cinco <li> Seis <li> Sete <li> Oito";
+          
     </script>
   </body>
 </html>
