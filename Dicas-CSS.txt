@@ -1,7 +1,0 @@
-Dicas CSS
-
-.outline-title{
-display:none;
-}
-
-<h4 class="outline-title"> Título da Sessão</h4>
