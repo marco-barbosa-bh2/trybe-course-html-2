@@ -57,6 +57,53 @@
                     contaTexto+=1;
                 });
 
+                //Muda tamanho do texto
+                
+                //Variaveis
+                let tamanhoDoTexto=document.querySelector("#tamanhoDaFonte");
+                let contaTamanho=0;
+
+                //Inicialização da contagem
+                if(localStorage.getItem("txtsize")){
+                    if(localStorage.getItem("txtsize")=="100%"){
+                        contaTamanho=0;
+                    }
+                    else if(localStorage.getItem("txtsize")=="125%"){
+                        contaTamanho=1;
+                    }
+                    else if(localStorage.getItem("txtsize")=="150%"){
+                        contaTamanho=2;
+                    }
+                    else if(localStorage.getItem("txtsize")=="200%"){
+                        contaTamanho=3;
+                    }
+                    else if(localStorage.getItem("txtsize")=="250%"){
+                        contaTamanho=4;
+                    }
+                    else if(localStorage.getItem("txtsize")=="400%"){
+                        contaTamanho=5;
+                    }
+                }
+                
+                //verifica se existe algum tamanho de texto já gravada
+                if(localStorage.getItem("txtsize")){
+                    document.querySelector("article").style.fontSize=localStorage.getItem("txtsize");
+                    }
+
+                tamanhoDoTexto.addEventListener("click",function mudaTamanhoTexto(){
+                    let txtt=["125%","150%","200%","250%","400%","100%"];
+                    
+                    if(contaTamanho>=txtt.length){
+                        contaTamanho=0;
+                    }
+                    
+                    document.querySelector("article").style.fontSize=txtt[contaTamanho].toString();
+                    
+                    localStorage.setItem("txtsize",txtt[contaTamanho].toString());
+
+                    contaTamanho+=1;
+                });
+
             }
         </script>
     </head>
@@ -64,14 +111,21 @@
         <article>
             <div>
                 <h1>Lorem Ipsum</h1>
+
                 <button id="corDoFundo">BackGroundColor
                 </button>
-                <h4>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</h4>
-                <h5>"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."</h5>
                 
                 <button id="corDoTexto">
                     Text Color
                 </button>
+
+                <button id="tamanhoDaFonte">
+                    A+
+                </button>
+
+                <h4>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</h4>
+                <h5>"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."</h5>
+
             </div>
             <div id="lipsum">
                 <p>
@@ -89,10 +143,7 @@
                 <p>
                 Praesent vestibulum bibendum lectus, in feugiat nibh vestibulum sit amet. Morbi porta, nibh ut gravida volutpat, justo quam eleifend ante, sit amet interdum libero nunc a sapien. Mauris fermentum nisi efficitur efficitur blandit. Nunc varius lacinia purus. Integer facilisis feugiat ullamcorper. Ut non lacus nec ex fermentum varius auctor ac enim. Praesent a viverra mi. Sed pretium, orci condimentum dapibus elementum, sapien lorem dapibus ex, a tincidunt libero risus vitae mi. Nulla facilisi.
                 </p></div>
-                
-                
-                <button id="tamanhoDaFonte">
-                </button>
+            
                 
                 <button id="espacamentoLinhas">
                 </button>
