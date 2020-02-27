@@ -152,6 +152,54 @@
                 });
 
 
+                //Muda familia da fonte
+                
+                //Variaveis
+                let tipoDaFonte=document.querySelector("#tipoDaFonte");
+                let familia=0;
+
+                //Inicialização da contagem
+                if(localStorage.getItem("ffamily")){
+                    if(localStorage.getItem("ffamily")=="Arial"){
+                        familia=0;
+                    }
+                    else if(localStorage.getItem("ffamily")=="TimesNewRoman"){
+                        familia=1;
+                    }
+                    else if(localStorage.getItem("ffamily")=="sans-serif"){
+                        familia=2;
+                    }
+                    else if(localStorage.getItem("ffamily")=="Verdana"){
+                        familia=3;
+                    }
+                    else if(localStorage.getItem("ffamily")=="Helvetica"){
+                        familia=4;
+                    }
+                    else if(localStorage.getItem("ffamily")=="Courier"){
+                        familia=5;
+                    }
+                }
+                
+                //verifica se existe algum tamanho de texto já gravada
+                if(localStorage.getItem("ffamily")){
+                    document.querySelector("article").style.fontFamily=localStorage.getItem("ffamily");
+                    }
+
+                tipoDaFonte.addEventListener("click",function mudaFamiliaFonte(){
+                    let tipos=["TimesNewRoman","sans-serif","Verdana","Helvetica","Courier","Arial"];
+                    
+                    if(familia>=tipos.length){
+                        familia=0;
+                    }
+                    
+                    document.querySelector("article").style.fontFamily=tipos[familia].toString();
+                    localStorage.setItem("ffamily",tipos[familia].toString());
+
+                    familia+=1;
+                });
+
+
+
             }
         </script>
     </head>
@@ -175,6 +223,10 @@
                     Line Space
                 </button>
 
+                <button id="tipoDaFonte">
+                    Style
+                </button>
+
                 <h4>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</h4>
                 <h5>"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."</h5>
 
@@ -196,13 +248,6 @@
                 Praesent vestibulum bibendum lectus, in feugiat nibh vestibulum sit amet. Morbi porta, nibh ut gravida volutpat, justo quam eleifend ante, sit amet interdum libero nunc a sapien. Mauris fermentum nisi efficitur efficitur blandit. Nunc varius lacinia purus. Integer facilisis feugiat ullamcorper. Ut non lacus nec ex fermentum varius auctor ac enim. Praesent a viverra mi. Sed pretium, orci condimentum dapibus elementum, sapien lorem dapibus ex, a tincidunt libero risus vitae mi. Nulla facilisi.
                 </p></div>
             
-                
-                
-                
-                <button id="tipoDaFonte">
-                </button>
-    
-
         </article>
         
     </body>
