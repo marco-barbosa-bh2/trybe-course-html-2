@@ -104,6 +104,54 @@
                     contaTamanho+=1;
                 });
 
+                //Muda espaçamento linhas
+                
+                //Variaveis
+                let espacamentoLinhas=document.querySelector("#espacamentoLinhas");
+                let linha=0;
+
+                //Inicialização da contagem
+                if(localStorage.getItem("pline")){
+                    if(localStorage.getItem("pline")=="100%"){
+                        linha=0;
+                    }
+                    else if(localStorage.getItem("pline")=="125%"){
+                        linha=1;
+                    }
+                    else if(localStorage.getItem("pline")=="150%"){
+                        linha=2;
+                    }
+                    else if(localStorage.getItem("pline")=="200%"){
+                        linha=3;
+                    }
+                    else if(localStorage.getItem("pline")=="250%"){
+                        linha=4;
+                    }
+                    else if(localStorage.getItem("pline")=="400%"){
+                        linha=5;
+                    }
+                }
+                
+                //verifica se existe algum tamanho de texto já gravada
+                if(localStorage.getItem("pline")){
+                    document.querySelector("article").style.lineHeight=localStorage.getItem("pline");
+                    }
+
+                espacamentoLinhas.addEventListener("click",function mudaEspacoLinhas(){
+                    let spaces=["125%","150%","200%","250%","400%","100%"];
+                    
+                    if(linha>=spaces.length){
+                        linha=0;
+                    }
+                    
+                    document.querySelector("article").style.lineHeight=spaces[linha].toString();
+                    
+                    localStorage.setItem("pline",spaces[linha].toString());
+
+                    linha+=1;
+                });
+
+
             }
         </script>
     </head>
@@ -121,6 +169,10 @@
 
                 <button id="tamanhoDaFonte">
                     A+
+                </button>
+
+                <button id="espacamentoLinhas">
+                    Line Space
                 </button>
 
                 <h4>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</h4>
@@ -145,8 +197,7 @@
                 </p></div>
             
                 
-                <button id="espacamentoLinhas">
-                </button>
+                
                 
                 <button id="tipoDaFonte">
                 </button>
