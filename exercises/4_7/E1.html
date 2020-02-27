@@ -24,14 +24,7 @@
                     if(conta>=bgc.length){
                         conta=0;
                     }
-                    
-                    if(bgc[conta].toString()=="black"){
-                        document.querySelector("article").style.color="white";
-                    }
-                    else{
-                        document.querySelector("article").style.color="black";
-                    }
-
+                   
                     document.body.style.backgroundColor=bgc[conta].toString();
                     
                     localStorage.setItem("bgcolor",bgc[conta].toString());
@@ -40,6 +33,30 @@
                 });
 
                 //Muda cor do texto
+                
+                //Variaveis
+                let corDoTexto=document.querySelector("#corDoTexto");
+                let contaTexto=0;
+                
+                //verifica se existe alguma cor de texto já gravada
+                if(localStorage.getItem("txtcolor")){
+                    document.querySelector("article").style.color=localStorage.getItem("txtcolor");                        
+                }
+
+                corDoTexto.addEventListener("click",function mudaCorTexto(){
+                    let txtc=["yellow","pink","blue","black","cyan","white"];
+                    
+                    if(contaTexto>=txtc.length){
+                        contaTexto=0;
+                    }
+                    
+                    document.querySelector("article").style.color=txtc[contaTexto].toString();
+                    
+                    localStorage.setItem("txtcolor",txtc[contaTexto].toString());
+
+                    contaTexto+=1;
+                });
+
             }
         </script>
     </head>
@@ -51,6 +68,10 @@
                 </button>
                 <h4>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</h4>
                 <h5>"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."</h5>
+                
+                <button id="corDoTexto">
+                    Text Color
+                </button>
             </div>
             <div id="lipsum">
                 <p>
@@ -69,10 +90,6 @@
                 Praesent vestibulum bibendum lectus, in feugiat nibh vestibulum sit amet. Morbi porta, nibh ut gravida volutpat, justo quam eleifend ante, sit amet interdum libero nunc a sapien. Mauris fermentum nisi efficitur efficitur blandit. Nunc varius lacinia purus. Integer facilisis feugiat ullamcorper. Ut non lacus nec ex fermentum varius auctor ac enim. Praesent a viverra mi. Sed pretium, orci condimentum dapibus elementum, sapien lorem dapibus ex, a tincidunt libero risus vitae mi. Nulla facilisi.
                 </p></div>
                 
-                
-    
-                <button id="corDoTexto">
-                </button>
                 
                 <button id="tamanhoDaFonte">
                 </button>
