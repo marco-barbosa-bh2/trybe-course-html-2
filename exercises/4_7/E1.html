@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <title>
+        Daily News
+        </title>
+
+        <script>
+            window.onload=function(){
+                //muda cor do fundo
+
+                //Variaveis
+                let corDoFundo=document.querySelector("#corDoFundo");
+                let conta=0;
+                
+                //verifica se existe alguma cor já gravada
+                if(localStorage.getItem("bgcolor")){
+                        document.body.style.backgroundColor=localStorage.getItem("bgcolor");                        
+                }
+
+                corDoFundo.addEventListener("click",function mudaCor(){
+                    let bgc=["yellow","pink","blue","black","cyan","white"];
+                    
+                    if(conta>=bgc.length){
+                        conta=0;
+                    }
+                    
+                    if(bgc[conta].toString()=="black"){
+                        document.querySelector("article").style.color="white";
+                    }
+                    else{
+                        document.querySelector("article").style.color="black";
+                    }
+
+                    document.body.style.backgroundColor=bgc[conta].toString();
+                    
+                    localStorage.setItem("bgcolor",bgc[conta].toString());
+
+                    conta+=1;
+                });
+
+                //Muda cor do texto
+            }
+
+        </script>
+    </head>
+    <body>
+        <article>
+            <div>
+                <h1>Lorem Ipsum</h1>
+                <button id="corDoFundo">BackGroundColor
+                </button>
+                <h4>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</h4>
+                <h5>"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."</h5>
+            </div>
+            <div id="lipsum">
+                <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi luctus consectetur metus eu sollicitudin. Etiam vitae pretium ligula, sed hendrerit massa. Fusce in est eu arcu vehicula blandit at in lorem. Cras tellus massa, fermentum sit amet mauris ac, mollis posuere tellus. Pellentesque dignissim velit sit amet lorem ornare sodales. Quisque sodales mi massa, sit amet ultricies sapien laoreet at. Suspendisse convallis vulputate ante, vestibulum fringilla risus elementum vitae. Etiam vel tortor sed nibh pulvinar volutpat quis vitae arcu. Duis in nibh congue, mattis quam et, feugiat felis. Vivamus scelerisque dapibus metus fringilla imperdiet. Integer vel erat eu metus dapibus sollicitudin. Praesent eu vehicula urna. Pellentesque sollicitudin, tellus quis gravida scelerisque, justo nibh accumsan tortor, at molestie nibh enim sed elit. Suspendisse eget tempor dui, nec vestibulum eros. Sed ut nibh quis sapien bibendum gravida. Nulla eu sollicitudin lorem.
+                </p>
+                <p>
+                Duis feugiat ligula venenatis, pretium justo a, lobortis erat. Fusce nibh elit, vulputate nec tincidunt ut, interdum ac ligula. Nunc dignissim tortor sed turpis fermentum imperdiet. Aliquam in nisl eu mi varius ultricies sed non elit. Sed ut arcu id dolor pretium eleifend sed sollicitudin ante. Morbi rutrum, nulla sed facilisis auctor, dolor sapien vulputate massa, non elementum mauris ipsum id magna. Proin nunc turpis, aliquam sit amet vulputate ac, ultricies eget purus. Aliquam erat volutpat. Nulla porttitor libero cursus eros ultrices, non aliquet felis imperdiet. Maecenas ac odio ullamcorper, euismod odio sed, aliquet lacus. Sed rhoncus metus a nisi lobortis ornare. Nam in neque aliquam, dapibus nibh vitae, egestas lorem. Cras viverra tempus orci vitae egestas. Morbi lectus lacus, rhoncus quis diam sit amet, ultricies faucibus ante. Proin laoreet tristique enim. Vestibulum pellentesque, purus in mollis laoreet, ligula tortor ultrices leo, quis congue libero tellus nec erat.
+                </p>
+                <p>
+                Integer tempor nunc sed metus rutrum, id lacinia dolor convallis. Nulla facilisi. Nunc molestie sodales pellentesque. Morbi hendrerit est ut malesuada faucibus. Vivamus sit amet odio sit amet metus malesuada malesuada. Duis imperdiet eros non elit laoreet mattis. Fusce accumsan mi sit amet augue tempus, in hendrerit ante laoreet. Morbi venenatis urna varius, rhoncus turpis et, posuere tellus. Proin bibendum, augue vitae consequat maximus, metus mi fringilla velit, a eleifend nibh nulla ac turpis. Integer commodo risus congue nisl elementum volutpat.
+                </p>
+                <p>
+                Cras nulla justo, eleifend quis tellus vitae, facilisis malesuada nisi. Integer nisi lacus, suscipit tincidunt dolor non, volutpat convallis metus. Aliquam erat volutpat. Praesent in massa sagittis, mollis tellus efficitur, vestibulum odio. Praesent euismod placerat magna, eu euismod nisi cursus ut. Fusce scelerisque tellus non diam tincidunt, ullamcorper vestibulum nisl iaculis. Donec ullamcorper nibh at felis maximus vulputate. Etiam turpis nisl, ornare id erat ac, aliquet mollis purus.
+                </p>
+                <p>
+                Praesent vestibulum bibendum lectus, in feugiat nibh vestibulum sit amet. Morbi porta, nibh ut gravida volutpat, justo quam eleifend ante, sit amet interdum libero nunc a sapien. Mauris fermentum nisi efficitur efficitur blandit. Nunc varius lacinia purus. Integer facilisis feugiat ullamcorper. Ut non lacus nec ex fermentum varius auctor ac enim. Praesent a viverra mi. Sed pretium, orci condimentum dapibus elementum, sapien lorem dapibus ex, a tincidunt libero risus vitae mi. Nulla facilisi.
+                </p></div>
+                
+                
+    
+                <button id="corDoTexto">
+                </button>
+                
+                <button id="tamanhoDaFonte">
+                </button>
+                
+                <button id="espacamentoLinhas">
+                </button>
+                
+                <button id="tipoDaFonte">
+                </button>
+    
+
+        </article>
+        
+    </body>
+</html>
