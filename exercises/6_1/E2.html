@@ -40,6 +40,22 @@
                   <br>
                 </form>
               </fieldset>
+              <fieldset>
+                <legend>Último Emprego</legend>
+                <label for="curriculo">Resumo do Currículo</label>
+                <textarea id="curriculo" name="curriculo" maxlength="1000" rows="20" cols="50" required="required"></textarea>
+                <br>
+                <label for="cargo">Cargo</label>
+                <input type="text" id="cargo" name="cargo" maxlength="40" required = "required"></input>
+                <br>
+                <label for="descricaoCargo">Descrição do Cargo</label>
+                <input type="text" id="descricaoCargo" name="descricaoCargo" maxlength="500" required = "required"></input>
+                <br>
+                <label for="dataInicio">Data de Inicio</label>
+                <input type="text" id="dataInicio" name="dataInicio" maxlength="10" required = "required" placeholder="dd/mm/aaaa"></input>
+                <span id="avisoData"></span>
+                <br>
+              </fieldset>
           </div>
         </div>
       </section>
