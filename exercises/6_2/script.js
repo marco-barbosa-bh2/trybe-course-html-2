@@ -11,6 +11,9 @@ estado.addEventListener('mouseover', function () {
   }  
 });
 
+dataInicio.DatePickerX.init();
+
+/*
 dataInicio.addEventListener('keyup', function () {
   const dataInserida = dataInicio.value;
   let dataSeparada = [];
@@ -38,3 +41,4 @@ dataInicio.addEventListener('keyup', function () {
   }
 
 });
+*/
