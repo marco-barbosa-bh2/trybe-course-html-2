@@ -17,3 +17,4 @@ dataInicio.DatePickerX.init({
   todayButtonLabel : 'Hoje',
 });
 
+new window.JustValidate('.js-form');
