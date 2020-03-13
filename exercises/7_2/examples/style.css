@@ -1,0 +1,50 @@
+.p1 {
+  animation-duration: 3s;
+  animation-name: apagando;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.p2 {
+  animation-duration: 5s;
+  animation-name: deslizando;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes apagando {
+  from {
+    color: red;
+    font-size: 20px;
+    opacity: 100%;
+  }
+
+  50% {
+    color: black;
+    font-size: 16px;
+    opacity: 50%;
+  }
+
+  to {
+    color: blue;
+    font-size: 12px;
+    opacity : 0;
+  }
+}
+
+@keyframes deslizando {
+  from {
+    margin-left: 100%;
+    width: 300%
+  }
+
+  75% {
+    margin-left: 25%;
+    width: 150%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
