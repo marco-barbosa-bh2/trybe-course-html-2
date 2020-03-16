@@ -1,0 +1,66 @@
+div {
+  height: 140px;
+}
+
+.footer {
+  background-color: black;
+  bottom: 0;
+  color: white;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+}
+
+.grid {
+  align-items: baseline;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 800px;
+}
+  
+:hover.cresce {
+  animation: cresceDiminui 2000ms linear;
+}
+  
+:hover.roda {
+  animation: rotacao 2000ms linear;
+  animation-fill-mode: initial;   
+}  
+
+:hover.translada {
+  animation: transladacao 2000ms linear;
+}
+  
+.listaCartas {
+  align-self: center;
+  width: 10%;
+}
+
+@keyframes rotacao {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes cresceDiminui {
+    0% {
+        transform: scale(0.75);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+}
+
+@keyframes transladacao {
+    0% {
+      transform: translate(20px, 5px);
+    }
+    100% {
+      transform: translate(-20px, -5px);
+    }
+}
