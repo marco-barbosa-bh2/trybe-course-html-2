@@ -65,8 +65,8 @@ const books = [
 
 function smallerName() {
   let nameBook;
-  let tamanho = 1000;
   // escreva aqui o seu código
+  let tamanho = 1000;
   books.forEach(element => {
     if (element.name.length < tamanho) {
       nameBook = element.name;
