@@ -110,6 +110,16 @@ const expected_result = [
 
 function booksOrderedByReleaseYearDesc() {
   // escreva aqui seu código
+  return books.sort(function (a, b) {
+    if (a.releaseYear > b.releaseYear) {
+      return -1;
+    }
+    if (a.releaseYear < b.releaseYear) {
+      return 1;
+    }
+    // a must be equal to b
+    return 0;
+  });
 }
 
 
