@@ -65,27 +65,16 @@ const books = [
 
 function smallerName() {
   let nameBook;
+  let tamanho = 1000;
   // escreva aqui o seu código
-  nameBook = books.forEach(element => {
-    let nome = [];
-    let tamanho = 1000;
-    if(element.name.length < tamanho){
-      nome = element;
+  books.forEach(element => {
+    if (element.name.length < tamanho) {
+      nameBook = element.name;
       tamanho = element.name.length;
     }
-    return tamanho;
   });
   // Variável nameBook que receberá o valor do menor nome;
   return nameBook;
 }
 
-//assert.equal(smallerName(), 'Duna');
-//console.log(smallerName());
-
-const nomezinho = books.forEach((element) => {
-  if(element.name === 'Duna') {
-    return false;
-  }
-  return element;});
-  
-console.log(nomezinho);
+assert.equal(smallerName(), 'Duna');
