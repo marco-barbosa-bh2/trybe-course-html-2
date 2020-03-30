@@ -7,7 +7,6 @@ const rectangle2 = [3, 5]
 const rectangle3 = [6, 9]
 const rectangles = [rectangle1, rectangle2, rectangle3]
 
-// for(rectangle of rectangles) {
-//    assert.equal(rectangleArea(), rectangle[0]*rectangle[1]) // altere a chamada da funcao rectangleArea
-// }
-assert.equal(rectangleArea(rectangles), rectangle[0] * rectangle[1]) // altere a chamada da funcao rectangleArea
+for(rectangle of rectangles) {
+  assert.equal(rectangleArea(...rectangle), rectangle[0]*rectangle[1]); // altere a chamada da funcao rectangleArea
+}
