@@ -11,6 +11,7 @@
 //   fizz
 //   4
 //   buzz
+//
 
 function fizzBuzz(n) {
   const array = [];
