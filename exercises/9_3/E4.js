@@ -30,15 +30,14 @@ const people = [
 
 // escreva filterPeople abaixo
 
-const filterPeople = ({name, nationality,bornIn}) => {
-    if (nationality === 'Australian' && (bornIn >= 1901 && bornIn <=2000)) {
-      return {name, bornIn, nationality};
-    }
-  }
+const filterPeople = () => {
+  return people.filter((element, index, array) =>
+  array[index].nationality === 'Australian').filter((element, index, array) =>
+  array[index].bornIn >= 1901 && array[index].bornIn <= 2000);
+}
 
-const filteredPeople = [];
-
-filteredPeople.push(filterPeople(people));
+let filteredPeople = [];
+filteredPeople = filterPeople();
 
 assert.deepEqual(filteredPeople[0], { name: "Nicole", bornIn: 1992, nationality: "Australian" })
 assert.deepEqual(filteredPeople[1], { name: "Toby", bornIn: 1901, nationality: "Australian" })

@@ -19,4 +19,3 @@ const personLikes = ({ name, age, likes = [likes] }) => `${name} is ${age} years
 
 assert.equal(personLikes(alex), "Alex is 26 years old and likes fly fishing.")
 assert.equal(personLikes(gunnar), "Gunnar is 30 years old and likes hiking, scuba diving, taking pictures.")
-    
