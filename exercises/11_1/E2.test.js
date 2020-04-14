@@ -1,4 +1,4 @@
-const {findUserById, getUserName} = require('./E2.js');
+const getUserName = require('./E2.js');
 
 test('A valid user found', () => {
   expect.assertions(1);
