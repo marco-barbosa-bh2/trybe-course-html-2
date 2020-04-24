@@ -9,8 +9,9 @@
 
 .pokedex {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -32,6 +33,17 @@
 
 .App-link {
   color: #61dafb;
+}
+
+@media only screen and ( max-width : 760px ) {
+
+  .pokedex {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+  }
+
 }
 
 @keyframes App-logo-spin {
