@@ -1,0 +1,21 @@
+.App {
+  text-align: left;
+}
+
+.Drop {
+  margin-left: 0;
+  width: 50px;
+  text-align: left;
+}
+
+.DropList {
+  margin-left: 0;
+  width: 150px;
+  text-align: left;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
