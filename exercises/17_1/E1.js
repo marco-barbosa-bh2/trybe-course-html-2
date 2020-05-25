@@ -1,3 +1,4 @@
+// Redux exercises
 const action = {
     type: 'LOGIN'
 }
