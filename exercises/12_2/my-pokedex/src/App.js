@@ -1,15 +1,18 @@
 import React from 'react';
-// import logo from './logo.svg';
+import { Provider } from 'react-redux';
+import store from './store';
+import Counter from './components/Counter';
+import Button from './components/Button';
 import './App.css';
-import pokemonsData from './data';
-import Pokedex from './Pokedex';
 
 function App() {
   return (
-    <div className="App">
-      <div><h1>Pokedex</h1></div>
-      <div className="pokedex"><Pokedex pocketMonsters = {pokemonsData} /></div>
-    </div>
+    <Provider store={store}>
+      <div>
+        <Counter />
+        <Button />
+      </div>
+    </ Provider>
   );
 }
 
