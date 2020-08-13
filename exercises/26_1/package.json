@@ -1,0 +1,25 @@
+{
+  "name": "calcula-imc",
+  "version": "0.0.1",
+  "description": "Calcula o IMC de uma pessoa",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "IMC",
+    "Calculo",
+    "IMC",
+    "Calcular",
+    "IMC",
+    "Peso",
+    "Saude",
+    "Obesidade"
+  ],
+  "author": "Marco Barbosa <marco.meireles.b@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
