@@ -1,4 +1,4 @@
-const readline = require("readline-sync");
+const inquirer = require('inquirer');
 
 const interpretaResultados = (r) => {
   if (r < 18.5) {
@@ -23,11 +23,46 @@ const IMC = (a, p) => {
   return interpretaResultados(resultado);
 };
 
-const calculoIMC = () => {
-const altura = readline.questionFloat("Digite sua Altura em metros ");
-const peso = readline.questionFloat("Digite o seu Peso em kg ");
-console.log(`Sua Altura é: ${altura} e seu Peso é: ${peso}`);
-IMC(altura, peso);
-};
+const perguntas = () => {
+  const questions = [
+    {
+      type: "input",
+      name: "altura",
+      message: "Digite sua Altura em metros ",
+      validate: function (value) {
+        if ((value - 0) >= 0) { // "Transforma uma string em número no JS"
+          return true;
+        }
+        return 'Por favor insira um valor numérico';
+      } 
+    },
+    {
+      type: "input",
+      name: "peso",
+      message: "Digite seu Peso em kg ",
+      validate: function (value) {
+        if ((value - 0) >= 0) { // "Transforma uma string em número no JS"
+          return true;
+        }
+        return 'Por favor insira um valor numérico';
+      }
+    }
+  ];
 
-calculoIMC();
+// Copiado da documentacao em https://www.npmjs.com/package/inquirer#installation
+  inquirer.prompt(questions)
+  .then(answers => {
+    console.log(`Sua altura é ${answers.altura}, seu peso é ${answers.peso}`);
+    IMC(answers.altura, answers.peso);
+  })
+  .catch(error => {
+    if(error.isTtyError) {
+      // Prompt couldn't be rendered in the current environment
+    } else {
+      // Something else when wrong
+    }
+  });
+};
+// fim da cópia
+
+perguntas();

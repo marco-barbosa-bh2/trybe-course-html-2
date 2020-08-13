@@ -20,6 +20,7 @@
   "author": "Marco Barbosa <marco.meireles.b@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "inquirer": "^7.3.3",
     "readline-sync": "^1.4.10"
   }
 }
