@@ -3,7 +3,7 @@
 
 // };
 let expendingTime = [0, 0];
-const files = ['meu-arquivo.txt', 'meu-arquivo.txt'];
+const files = ['/home/marco/Downloads/meu-arquivo.txt', '/home/marco/Downloads/meu-arquivo.txt'];
 
 // Copiado do conteudo da aula 26.2 com pequenas alterações 
 const fs = require('fs');
