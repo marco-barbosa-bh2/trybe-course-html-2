@@ -6,13 +6,13 @@ const router = express.Router();
 router.get('/list-products', (req, res, next) => {
   const products = new ProductModel().getAll();
 
-  res.send(products);
+  res.status(200).json(products);
 });
 
 router.get('/:id', (req, res, next) => {
   const product = new ProductModel().getById(req.params.id);
 
-  res.send(product);
+  res.status(200).json(product);
 });
 
 router.post('/new', (req, res) => {
@@ -21,13 +21,13 @@ router.post('/new', (req, res) => {
   const newProduct = new ProductModel(name, brand);
   newProduct.add();
 
-  res.send(newProduct);
+  res.status(201).json(newProduct);
 });
 
 router.delete('/:id', (req, res) => {
   const products = new ProductModel().delete(req.params.id);
-
-  res.send(products);
+  res.status(202);
+  // res.send(products);
 });
 
 router.post('/update-user/:id', (req, res) => {
