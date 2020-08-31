@@ -7,13 +7,6 @@
   pointer-events: none;
 }
 
-.pokedex {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -33,17 +26,6 @@
 
 .App-link {
   color: #61dafb;
-}
-
-@media only screen and ( max-width : 760px ) {
-
-  .pokedex {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-  }
-
 }
 
 @keyframes App-logo-spin {

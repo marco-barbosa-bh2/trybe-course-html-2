@@ -10,3 +10,4 @@ const charAPI = (char) => (
 );
 
 export default charAPI;
+
