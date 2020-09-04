@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang = "pt-br">
+  <head><title></title>
+  <meta name="charset" content="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" href="./justValidadeTooltip.min.css">
+  <link href="./bulma.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./DatePickerX.min.css">
+  <link href="./style.css" rel="stylesheet">
+  </head>
+  <body>
+    <header class="section"> <h3 class="title">Envie Seu Currículo</h3>
+       <nav></nav>
+    </header>
+    <article>
+      <section class="section">
+        <div class="container">
+          <div class="main">
+          <form action="#" class="js-form form">
+            <div class="field">
+                <div class="control">
+                  <label class="label">
+                    Nome
+                    <input class="input" type="text" data-validate-field="name" id="name" name="name" maxlength="40" required = "required"></input>
+                  </label>
+                </div>
+            </div>
+            <div class="field">
+              <div class="control">
+                <label class="label">E-mail
+                    <input type="email" class="input" placeholder="Seu E-mail" autocomplete="off" data-validate-field="email" name="email" id="email"></input>
+                </label>
+              </div>
+            </div>
+            <div class="field">
+                <div class="control">
+                    <label class="label">
+                      CPF
+                      <input type="text" class="input" id="cpf" name="cpf" maxlength="11" required = "required"></input>
+                    </label>
+                </div>
+            </div>
+            <div class="field">
+                <div class="control">
+                  <label class="label">
+                    Endereço
+                    <input type="text" class="input" id="endereco" name="endereco" maxlength="200" required = "required"></input>
+                  </label>
+                </div>
+            </div>
+            <div class="field">
+                <div class="control">
+                    <label class="label">
+                      Cidade
+                      <input type="text" class="input" id="cidade" name="cidade" maxlength="28" required = "required"></input>
+                    </label>
+                </div>
+            </div>
+            <div class="control">
+                <div class="select">
+                  <select name="estado" id="estado">
+                    <option>UF</option>    
+                  </select>
+                </div>
+            </div>
+            <div class="control">
+              <label class="label">
+                Tipo
+                <input type="radio" class="radio" id="casa" name="casa" required = "required"></input>
+                <span>Casa</span>
+                <input type="radio" class="radio" id="apartamento" name="casa" required = "required"></input>
+                <span>Apartamento</span>
+              </label>
+            </div>
+            <p class="label">Último Emprego</p>
+            <label class="label">
+              Resumo do Currículo
+              <textarea class="textarea" id="curriculo" name="curriculo" maxlength="1000" required="required"></textarea>
+            </label>    
+            <div class="field">
+                <div class="control">
+                    <label class="label">
+                      Cargo
+                      <input type="text" class="input" id="cargo" name="cargo" maxlength="40" required = "required"></input>
+                    </label>
+                </div>
+            </div>    
+            <div class="field">
+                <div class="control">
+                  <label class="label">
+                    Descrição do Cargo
+                    <input type="text" class="input" id="descricaoCargo" name="descricaoCargo" maxlength="500" required = "required"></input>
+                    </label>
+                </div>
+            </div>
+            <div class="field">
+                <div class="control">
+                  <label class="label">
+                    Data de Inicio
+                    <input type="text" class="input" id="dataInicio" name="dataInicio" maxlength="10" required = "required" placeholder="dd/mm/aaaa"></input>
+                    <span id="avisoData"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="button is-success" type="submit" id="button1" class="button">Enviar</button>
+            </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+    <footer class="footer">Site desenvolvido por Marco Barbosa</footer>
+    <script src="./DatePickerX.min.js"></script>
+    <script src="./just-validade.min.js"></script>
+    <script src="./script.js"></script> <!-Deve sempre ser colocado no fim do body->
+  </body>
+</html>

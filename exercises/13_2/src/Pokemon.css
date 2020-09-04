@@ -1,0 +1,24 @@
+.list {  
+  border: gray solid 1px;
+  width: 45%;
+}
+
+@media only screen and ( max-width : 760px ) {
+
+  .list {  
+    border: gray solid 1px;
+    width: auto;
+  }
+}
+
+@media only screen and ( max-width : 360px ) {
+
+  img {
+    display: none;
+  }
+
+  .list {  
+    border: gray solid 1px;
+    width: auto;
+  }
+}

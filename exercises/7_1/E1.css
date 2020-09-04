@@ -1,0 +1,52 @@
+body {
+  font-size: 1.1em;
+  margin: 10px;
+}
+h1 {
+  font-size: 1.5em;
+}
+h2 {
+  font-size: 1.3em;
+}
+
+img {
+    max-width: 90%;
+    padding: 10px;
+}
+
+figure {
+	margin: 0;
+}
+
+@media screen and (min-width: 1296px) {
+  body {
+    display: inline-block;
+    background-color: darkseagreen;
+    font-size: 2em;
+  };
+
+  .colunas {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+
+  div {
+    width:40%
+  }
+
+  h1, h2, p {
+    display: inline-block;
+    width: 100%;
+  }
+
+  .left {
+    align-self: stretch;
+  }
+
+  .right {
+    align-self: stretch;
+  }
+
+}
