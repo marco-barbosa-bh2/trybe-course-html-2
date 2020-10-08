@@ -6,6 +6,7 @@ const controllers = require('./controllers');
 const app = express();
 
 app.use(express.json());
+app.use(bodyParser.json());
 
 app.use('/books', controllers.books);
 
@@ -14,6 +15,6 @@ app.use((err, _req, res, _next) => {
   res.status(500).json({ ok: false, message: 'Algo deu errado', errorMessage: err.message });
 });
 
-app.listen(3000, () => {
+app.listen(3001, () => {
   console.log('App ouvindo a porta 3000!');
-});
+}); 
