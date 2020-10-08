@@ -5,12 +5,11 @@ const bodyParser = require('body-parser');
 const controllers = require('./plantController');
 
 const app = express();
-app.use(cors(), bodyParser.json());
 
 app.use('/', bodyParser.json());
 
 // Chame as rotas
-app.get('/plants', controllers.getPlants());
+app.get('/plants', controllers.getPlants);
 
 const PORT = process.env.PORT || 3001;
 

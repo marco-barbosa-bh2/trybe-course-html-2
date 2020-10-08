@@ -24,9 +24,12 @@ const savePlants = () => {
   localStorage.setItem("plants", plants);
 };
 
-const getPlants = () => {
-  const plants = JSON.parse(localStorage.getItem("plants"));
-  return plants;
+const getPlants = (req, res) => {
+  const plants = services.getPlantsService();
+  if (! plants || !plants.length) {
+    res.status(404).send({error: 'not_found', message: 'Plants not found'});
+  }
+  res.status(200).send(plants);
 };
 
 const getPlantById = (id) => {
