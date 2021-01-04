@@ -1,16 +1,12 @@
-new_arr = []
-
-
-def numero_de_pares(array):
-    last = len(array) - 1
-    if len(array) == 0:
-        print(len(new_arr))
+def numero_de_pares(number, acc):
+    if number == 0:
+        print(acc)
     else:
-        if not array[last] % 2:
-            new_arr.append(array[last])
-        numero_de_pares(array[0:last])
+        if not number % 2:
+            acc = acc + 1
+        numero_de_pares(number - 1, acc)
 
 
-set_of_numbers = [0, 1, 2, 3, 4, 5, 6]
+set_of_numbers = 10
 
-numero_de_pares(set_of_numbers)
+numero_de_pares(set_of_numbers, 0)
