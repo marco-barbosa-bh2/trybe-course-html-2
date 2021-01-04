@@ -1,11 +1,11 @@
-def numero_de_pares(array):
+def numero_de_pares(number):
     m = 0
-    for n in range(0, len(array)):
-        if not (array[n] % 2):
+    for n in range(1, number + 1):
+        if not (n % 2):
             m = m + 1
     print(m)
 
 
-set_of_numbers = [0, 1, 2, 3, 4, 5, 6]
+set_of_numbers = 10
 
 numero_de_pares(set_of_numbers)
