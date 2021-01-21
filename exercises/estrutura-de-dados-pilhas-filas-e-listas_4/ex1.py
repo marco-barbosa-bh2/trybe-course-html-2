@@ -84,4 +84,3 @@ if __name__ == "__main__":
 
     # limpa a lista
     linked_list = DoublyLinkedList()
-# opa
